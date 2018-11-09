@@ -7,7 +7,7 @@ public class BeltMovement : MonoBehaviour {
 
     public int speed = 20;
     public static bool move = false;
-    public GameObject obj;
+    private GameObject obj;
     bool collided = false;
     public static bool destroy = false;
 
@@ -31,8 +31,9 @@ public class BeltMovement : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("COllision detected");
-        if (col.gameObject.name == "box")
+        if (col.gameObject.tag == "box")
         {
+            obj = col.gameObject;
             collided = true;
             move = true;
 
