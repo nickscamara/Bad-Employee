@@ -12,12 +12,9 @@ using System.Collections;
     private bool curDown = false;
     private bool prevDown = false;
     public Rigidbody2D rigidbody2D;
-    
     static bool pressed = false;
     void Start()
     {
-       
-        //rigidbody2D = GetComponent<Rigidbody2D>();
         prevMousePosition = Vector3.zero;
         positionChanges = new Vector3[VECTOR_COUNT];
         prevTimes = new float[VECTOR_COUNT];
