@@ -6,9 +6,11 @@ public class BeltMovement : MonoBehaviour {
 
 
     public int speed = 20;
-    bool move = false;
+    public static bool move = false;
     public GameObject obj;
     bool collided = false;
+    public static bool destroy = false;
+
 	
 	
 	// Update is called once per frame
@@ -17,11 +19,11 @@ public class BeltMovement : MonoBehaviour {
         {
             obj.transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-        else if (Move.OnM(true))
+        else if (Move.OnM() && destroy == false)
         {
             Debug.Log("diawdwad");
             move = false;
-            obj.transform.Translate(-Vector3.right * speed * Time.deltaTime);
+            obj.transform.Translate(Vector3.right * 0 * Time.deltaTime);
         }
             
         

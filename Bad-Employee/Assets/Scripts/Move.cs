@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
     private bool curDown = false;
     private bool prevDown = false;
     public Rigidbody2D rigidbody2D;
-
+    static bool pressed = false;
     void Start()
     {
         prevMousePosition = Vector3.zero;
@@ -60,7 +60,7 @@ public class Move : MonoBehaviour
 }
     void OnMouseDown()
     {
-        OnM(true);
+        pressed = true;
         print("down");
         curDown = true;
         rigidbody2D.velocity = Vector2.zero;
@@ -72,9 +72,9 @@ public class Move : MonoBehaviour
         curDown = false;
     }
 
-    public static bool OnM(bool a)
+    public static bool OnM()
     {
-        if (a)
+        if (pressed == true)
         {
             return true;
         }
