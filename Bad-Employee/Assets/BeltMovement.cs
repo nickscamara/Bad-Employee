@@ -8,6 +8,7 @@ public class BeltMovement : MonoBehaviour {
     public int speed = 20;
     bool move = false;
     public GameObject obj;
+    bool collided = false;
 	
 	
 	// Update is called once per frame
@@ -16,14 +17,26 @@ public class BeltMovement : MonoBehaviour {
         {
             obj.transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
+        else if (Move.OnM(true))
+        {
+            Debug.Log("diawdwad");
+            move = false;
+            obj.transform.Translate(-Vector3.right * speed * Time.deltaTime);
+        }
+            
+        
     }
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("COllision detected");
         if (col.gameObject.name == "box")
         {
+            collided = true;
             move = true;
-            
+
+        }
+        else {
+            move = false;
         }
     }
 }

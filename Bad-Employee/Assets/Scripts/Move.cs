@@ -1,8 +1,8 @@
 ﻿
 using UnityEngine;
 using System.Collections;
- 
- public class Move : MonoBehaviour
+
+public class Move : MonoBehaviour
 {
     private const int VECTOR_COUNT = 5;
     private int vectorIndex = 0;
@@ -44,7 +44,7 @@ using System.Collections;
                 totalTime += prevTimes[i];
                 totalDistance += positionChanges[i];
             }
-            velocity = totalDistance / ( totalTime * 10 );
+            velocity = totalDistance / (totalTime * 10);
             velocity = Camera.main.ScreenToWorldPoint(velocity) - Camera.main.ScreenToWorldPoint(Vector3.zero);
             rigidbody2D.velocity = velocity;
         }
@@ -56,11 +56,11 @@ using System.Collections;
         prevDown = curDown;
         prevMousePosition = Input.mousePosition;
 
-       
-    }
 
+}
     void OnMouseDown()
     {
+        OnM(true);
         print("down");
         curDown = true;
         rigidbody2D.velocity = Vector2.zero;
@@ -70,5 +70,15 @@ using System.Collections;
     {
         print("up");
         curDown = false;
+    }
+
+    public static bool OnM(bool a)
+    {
+        if (a)
+        {
+            return true;
+        }
+        return false;
+       
     }
 }
