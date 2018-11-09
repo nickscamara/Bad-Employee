@@ -4967,6 +4967,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 919007875}
   m_RootOrder: 1
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &660317666
 Prefab:
@@ -5208,6 +5209,9 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6129994, y: 0.21368408}
   m_EdgeRadius: 0
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 5c6c9dc... mid day
 --- !u!1 &1133548503
 GameObject:
   m_ObjectHideFlags: 0

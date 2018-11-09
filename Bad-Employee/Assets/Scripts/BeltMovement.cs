@@ -6,16 +6,11 @@ public class BeltMovement : MonoBehaviour {
 
 
     public int speed = 20;
-<<<<<<< HEAD
     public static bool move = false;
     private GameObject obj;
     bool collided = false;
     public static bool destroy = false;
 
-=======
-    bool move = false;
-    public GameObject obj;
->>>>>>> parent of 5c6c9dc... mid day
 	
 	
 	// Update is called once per frame
@@ -24,7 +19,6 @@ public class BeltMovement : MonoBehaviour {
         {
             obj.transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-<<<<<<< HEAD
         else if (Move.OnM() && destroy == false)
         {
             Debug.Log("diawdwad");
@@ -33,21 +27,19 @@ public class BeltMovement : MonoBehaviour {
         }
             
         
-=======
->>>>>>> parent of 5c6c9dc... mid day
     }
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("COllision detected");
         if (col.gameObject.tag == "box")
         {
-<<<<<<< HEAD
             obj = col.gameObject;
             collided = true;
-=======
->>>>>>> parent of 5c6c9dc... mid day
             move = true;
-            
+
+        }
+        else {
+            move = false;
         }
     }
 }

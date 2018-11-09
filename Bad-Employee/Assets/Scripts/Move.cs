@@ -1,8 +1,8 @@
 ﻿
 using UnityEngine;
 using System.Collections;
-
-public class Move : MonoBehaviour
+ 
+ public class Move : MonoBehaviour
 {
     private const int VECTOR_COUNT = 5;
     private int vectorIndex = 0;
@@ -47,7 +47,7 @@ public class Move : MonoBehaviour
                 totalTime += prevTimes[i];
                 totalDistance += positionChanges[i];
             }
-            velocity = totalDistance / (totalTime * 10);
+            velocity = totalDistance / ( totalTime * 10 );
             velocity = Camera.main.ScreenToWorldPoint(velocity) - Camera.main.ScreenToWorldPoint(Vector3.zero);
             rigidbody2D.velocity = velocity;
         }
@@ -59,11 +59,15 @@ public class Move : MonoBehaviour
         prevDown = curDown;
         prevMousePosition = Input.mousePosition;
 
+       
+    }
 
-}
     void OnMouseDown()
     {
+<<<<<<< HEAD
         pressed = true;
+=======
+>>>>>>> parent of 5c6c9dc... mid day
         print("down");
         curDown = true;
         rigidbody2D.velocity = Vector2.zero;
@@ -74,6 +78,7 @@ public class Move : MonoBehaviour
         print("up");
         curDown = false;
     }
+<<<<<<< HEAD
 
     public static bool OnM()
     {
@@ -84,4 +89,6 @@ public class Move : MonoBehaviour
         return false;
        
     }
+=======
+>>>>>>> parent of 5c6c9dc... mid day
 }
