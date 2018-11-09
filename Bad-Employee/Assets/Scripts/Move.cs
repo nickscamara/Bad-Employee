@@ -64,10 +64,9 @@ using System.Collections;
 
     void OnMouseDown()
     {
-<<<<<<< HEAD
+
         pressed = true;
-=======
->>>>>>> parent of 5c6c9dc... mid day
+
         print("down");
         curDown = true;
         rigidbody2D.velocity = Vector2.zero;
@@ -78,7 +77,7 @@ using System.Collections;
         print("up");
         curDown = false;
     }
-<<<<<<< HEAD
+
 
     public static bool OnM()
     {
@@ -89,6 +88,5 @@ using System.Collections;
         return false;
        
     }
-=======
->>>>>>> parent of 5c6c9dc... mid day
+
 }
